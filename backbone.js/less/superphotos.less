@@ -1,0 +1,58 @@
+body {
+  margin-top: 60px;
+}
+
+.thumbnail {
+  .makeColumn(3);
+  .box-shadow(); 
+  margin-bottom: 20px;
+  padding: 10px;
+  &:hover {
+    cursor: pointer;
+  }
+  img {
+    width: 162px;
+    height: 157px;
+  }
+}
+
+.modal {
+  .full {
+    max-width: 530px;
+    max-height: 400px;
+  }
+}
+
+.icon {
+  background: url("../img/icons.png") no-repeat;
+}
+
+.folders {
+  padding-right: 0px;
+}
+
+.folder {
+  padding: 4px 0px;
+  .row();
+  .icon {
+    .makeColumn(1);
+    height: 20px;
+  }
+  .title {
+    .makeColumn(2);
+    margin-top: 3px;
+    margin-left: 0px;
+  }
+  &:hover {
+    cursor:pointer;
+    background: #999;
+    color: white;
+  }
+  &.open {
+    background: #666;
+    color: white;
+    .icon {
+      background-position: 0px -20px;
+    }
+  }
+}

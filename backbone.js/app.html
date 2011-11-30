@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <title>SuperPhotos! A @saskjavascript Group Project.</title>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" media="all" />
+</head>
+<body>
+  
+  <div class="topbar">
+    <div class="topbar-inner">
+      <div class="container-fluid">
+        <a class="brand" href="#">SuperPhotos!</a>
+        <ul class="nav">
+          <li class="active"><a href="#">Backbone.JS Edition</a></li>
+        </ul>
+        <p class="pull-right">Fork me on <a href="https://github.com/davemo/saskjavascript/tree/app-showdown">Github</a></p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container-fluid">
+    <div class="sidebar">
+      <!-- ul.folders.unstyled.well>li.folder*5>span.icon+span.title -->
+      <ul class="folders unstyled well">
+        <!-- <li class="folder"><span class="icon"></span><span class="title">Vacation 2010</span></li>
+        <li class="folder"><span class="icon"></span><span class="title">Christmas 2009</span></li>
+        <li class="folder"><span class="icon"></span><span class="title">Grad Party</span></li>
+        <li class="folder open"><span class="icon"></span><span class="title">Cats!</span></li>
+        <li class="folder"><span class="icon"></span><span class="title">Dogs!</span></li> -->
+      </ul>
+    </div>
+    <div class="content">
+      <!-- ul.folder.unstyled.well.row>li.thumbnail*12>img[src="img/cats/157.jpeg" alt="Kitty!"] -->
+      <ul class="folder-contents unstyled well row">
+        <li>Select a folder</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div id="photo-detail" class="modal hide"></div>
+  
+  <!-- Templates -->
+  <script id="photo-detail-template" type="text/template">
+    <div class="modal-header">
+      <a class="close" href="#">&times;</a>
+      <h3 class="title">{{ title }}</h3>
+    </div>
+    <div class="modal-body">
+      <img class="full" src="{{ url }}" alt="{{ title }}"/>
+    </div>
+    <div class="modal-footer">
+      <p class="caption">{{ caption }}</p>
+    </div>
+  </script>
+  
+  <!-- 3rd Party Dependencies -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+  <script src="js/lib/bootstrap.modal.js"></script>
+  <script src="js/lib/underscore.js"></script>
+  <script src="js/lib/backbone.js"></script>  
+  
+  <!-- Our App Code -->
+  <script src="js/app.js"></script>
+  <script src="js/models.js"></script>  
+  <script src="js/collections.js"></script>
+  <script src="js/views.js"></script>
+  <script src="js/router.js"></script>
+  
+  <!-- Initialization Code -->
+  <script>
+    window.PhotoViewer = new APP.PhotoViewer();
+    Backbone.history.start();
+  </script>
+  
+</body>
+</html>
