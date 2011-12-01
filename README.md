@@ -7,7 +7,7 @@ This is an attempt to showcase a number of different approaches to a "fat client
 
 SuperPhotos! is a simple application that provides an interface to allow users to open folders of photos and preview those photos in a fullscreen mode.
 
-![superphotos!](https://github.com/davemo/saskjavascript/raw/app-showdown/img/super.photos.png)
+![superphotos!](https://github.com/saskjavascript/APP-Framework-Showdown/raw/master/backbone.js/img/super.photos.png)
 
 ## Architecture/Interaction Notes
 
